@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="add">123</h3>
+    <script src="ajax.js"></script>
+    <script>
+        //基本的使用实例
+        ajax({
+            url:"http://localhost:3300/say",
+            type:'post',
+            data:{
+                name: '123'
+            },
+            dataType:'json',
+            timeout:10000,
+            contentType:"application/json",
+            success:function(data){
+                document.getElementById('add').innerHTML = JSON.parse(data).time;
+    　　　　　　//服务器返回响应，根据响应结果，分析是否登录成功
+            },
+            //异常处理
+            error:function(e){
+                console.log(e);
+            }
+        })
+    </script>
+    
+</body>
+</html>
