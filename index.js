@@ -5,7 +5,7 @@ const cors = require('koa2-cors');
 const allSqlAction = require('./database') 
 
 const app = new koa();
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser());
 
 router.post('/say', ctx => {
@@ -67,6 +67,11 @@ router.get('/getCsdnArticles', async (ctx) => {
     ctx.body = {
         data: result
     }
+})
+
+
+router.post('/upload', ctx => {
+    ctx.body = 'koa upload demo'
 })
 
 // router.post('/delete', ctx => {

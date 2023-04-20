@@ -1,0 +1,49 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\crisfei\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;D:\虚?机\bin\;%;ystemRoot%\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;D:\gala_soft\bin;E:\java\JDK-11.0.8;-Dhttps.proxyHost=dl-proxy.neusoft.com -Dhttps.proxyPort=8080 -Dhttp.proxyHost=dl-proxy.neusoft.com -Dhttp.proxyPort=8080;D:\sbt\bin;-Dhttps.proxyHost=dl-proxy.neusoft.com -Dhttps.proxyPort=8080 -Dhttp.proxyHost=dl-proxy.neusoft.com -Dhttp.proxyPort=8080;D:\AWS\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\crisfei\AppData\Local\Microsoft\WindowsApps;E:\java\JDK-11.0.8\bin;E:\java\JDK-11.0.8\jre\bin;E:\IntelliJ IDEA Community Edition 2021.3.1\bin;;E:\java\JDK-11.0.8;-Dhttps.proxyHost=dl-proxy.neusoft.com -Dhttps.proxyPort=8080 -Dhttp.proxyHost=dl-proxy.neusoft.com -Dhttp.proxyPort=8080;D:\sbt\bin;-Dhttps.proxyHost=dl-proxy.neusoft.com -Dhttps.proxyPort=8080 -Dhttp.proxyHost=dl-proxy.neusoft.com -Dhttp.proxyPort=8080;C:\Users\crisfei\AppData\Roaming\npm;C:\Program Files\nodejs\;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: unable to get local issuer certificate
+      at TLSSocket.onConnectSecure (_tls_wrap.js:1497:34)
+      at TLSSocket.emit (events.js:315:20)
+      at TLSSocket._finishInit (_tls_wrap.js:932:8)
+      at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:706:12)
+
+npm manifest: 
+  {
+    "name": "koa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "koa-body": "^6.0.1",
+      "koa-bodyparser": "^4.3.0",
+      "koa-router": "^10.1.1",
+      "koa2": "^2.0.0-alpha.7",
+      "koa2-cors": "^2.0.6",
+      "mysql": "^2.18.1",
+      "ws": "^8.12.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -10,25 +10,68 @@
     <h3 id="add">123</h3>
     <script src="ajax.js"></script>
     <script>
+        Function.prototype.xtCall = function(thisArg) {
+            const fn = this
+            thisArg = (thisArg !== null || thisArg !==  undefined) ? Object(thisArg) : window
+            // 获取需要执行的函数
+            thisArg.fn = fn
+            thisArg.fn()
+            delete thisArg.fn
+            // const fn = this
+            // fn()
+        }
+
+        function foo() {
+            console.log(222, this)
+        }
+
+        foo.xtCall({name: 'kofi'})
+
+        // var a = {aaa: '123'}
+        // var b = {aaa: '1', bbb: 'aaaa'}
+        // console.log({...a, ...b})
+
+        // const arr = [1, 5, 10, 12, 15, 18]
+        // for (let i of arr) {
+        //     if (i > 10) {
+        //         break
+        //     }
+        //     console.log(i)
+        // }
+        
+        // let a = 46;
+
+        // let b = 10;
+
+        // [a, b] = [b, a];
+
+        // console.log(b)
+
+        const arr = [0, 1, 2, 3]
+        const arr1 = [...new Set(arr)]
+        arr[0] = 1
+        console.log(arr)
+        console.log(arr1)
+
         //基本的使用实例
-        ajax({
-            url:"http://localhost:3300/say",
-            type:'post',
-            data:{
-                name: '123'
-            },
-            dataType:'json',
-            timeout:10000,
-            contentType:"application/json",
-            success:function(data){
-                document.getElementById('add').innerHTML = JSON.parse(data).time;
-    　　　　　　//服务器返回响应，根据响应结果，分析是否登录成功
-            },
-            //异常处理
-            error:function(e){
-                console.log(e);
-            }
-        })
+    //     ajax({
+    //         url:"https://gaiatools-483118822.ap-northeast-1.elb.amazonaws.com/api/csv/data/device",
+    //         type:'get',
+    //         data:{
+    //             name: '123'
+    //         },
+    //         dataType:'json',
+    //         timeout:10000,
+    //         contentType:"application/json",
+    //         success:function(data){
+    //             document.getElementById('add').innerHTML = JSON.parse(data).time;
+    // 　　　　　　//服务器返回响应，根据响应结果，分析是否登录成功
+    //         },
+    //         //异常处理
+    //         error:function(e){
+    //             console.log(e);
+    //         }
+    //     })
     </script>
     
 </body>
